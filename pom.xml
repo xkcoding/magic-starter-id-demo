@@ -28,7 +28,7 @@
     </dependency>
 
     <dependency>
-      <groupId>com.xkcoding</groupId>
+      <groupId>com.xkcoding.magic</groupId>
       <artifactId>magic-core-tool</artifactId>
     </dependency>
 
@@ -48,7 +48,7 @@
     </dependency>
 
     <dependency>
-      <groupId>com.xkcoding</groupId>
+      <groupId>com.xkcoding.magic</groupId>
       <artifactId>magic-starter-id</artifactId>
     </dependency>
 
@@ -68,7 +68,7 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>com.xkcoding</groupId>
+        <groupId>com.xkcoding.magic</groupId>
         <artifactId>magic-starter-bom</artifactId>
         <version>${magic-starter-version}</version>
         <type>pom</type>

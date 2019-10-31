@@ -1,6 +1,7 @@
 package com.xkcoding.magicstarteriddemo.config;
 
 import cn.hutool.core.date.DateUtil;
+import com.xkcoding.magic.id.autoconfigure.IdDbProperties;
 import com.xkcoding.magic.id.support.factory.impl.DatabaseIdFactory;
 import com.xkcoding.magic.id.support.factory.impl.RedisIdFactory;
 import com.xkcoding.magic.id.support.factory.impl.SnowflakeIdFactory;
@@ -32,8 +33,8 @@ public class IdConfig {
     }
 
     @Bean
-    public Id databaseId2(DataSource dataSource) {
-        return DatabaseIdFactory.create().businessName(() -> String.format("test_db_2_%s", DateUtil.today())).prefix(() -> "2019-2-").dataSource(dataSource).step(1).stepStart(0).retryTimes(3).tableName("id_test").getInstance();
+    public Id databaseId2(DataSource dataSource, IdDbProperties dbProperties) {
+        return DatabaseIdFactory.create().businessName(() -> String.format("test_db_2_%s", DateUtil.today())).prefix(() -> "2019-2-").dataSource(dataSource).step(dbProperties.getStep()).stepStart(dbProperties.getStepStart()).retryTimes(dbProperties.getRetryTimes()).tableName(dbProperties.getTableName()).getInstance();
     }
 
     @Bean
