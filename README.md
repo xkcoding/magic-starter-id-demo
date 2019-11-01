@@ -49,16 +49,16 @@ magic:
 
 ```java
 @Bean
-public Id databaseId2(DataSource dataSource, IdDbProperties dbProperties) {
+public Id databaseId2(DataSource dataSource, IdDatabaseProperties databaseProperties) {
     return DatabaseIdFactory
       .create()
       .businessName(() -> String.format("test_db_%s", DateUtil.today()))
       .prefix(() -> "2019-")
       .dataSource(dataSource)
-      .step(dbProperties.getStep())
-      .stepStart(dbProperties.getStepStart())
-      .retryTimes(dbProperties.getRetryTimes())
-      .tableName(dbProperties.getTableName())
+      .step(databaseProperties.getStep())
+      .stepStart(databaseProperties.getStepStart())
+      .retryTimes(databaseProperties.getRetryTimes())
+      .tableName(databaseProperties.getTableName())
       .getInstance();
 }
 ```
