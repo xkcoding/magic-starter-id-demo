@@ -33,11 +33,6 @@
     </dependency>
 
     <dependency>
-      <groupId>com.xkcoding.magic</groupId>
-      <artifactId>magic-starter-oss</artifactId>
-    </dependency>
-
-    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-jdbc</artifactId>
     </dependency>
